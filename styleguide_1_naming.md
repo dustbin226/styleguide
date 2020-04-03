@@ -3,7 +3,7 @@
 
 - 作者：Yujian Lin (yjlin2018@mail.nwpu.edu.cn)
 - 创建日期：2020年4月2日
-- 最后修改：2020年4月2日
+- 最后修改：2020年4月3日
 
 ## 1. 命名约定
 
@@ -133,7 +133,7 @@ int ierr;               // 缩写含糊不清(虽然在Fortran MPI中经常出�
 int dstb;               // 连dustbin226自己的成员都不会懂的省略
 ```
 
-对于C++来说，有一些缩写是约定俗成，比如用<kbd>i</kbd>和<kbd>j</kbd>表示循环变量，用<kbd>T</kbd>表示模板参数等。常用的一些缩写可以参照如下对照表。
+对于C++来说，有一些缩写是约定俗成，比如用<kbd><small><font color=#CC1E1E>i</font></small></kbd>和<kbd><small><font color=#CC1E1E>j</font></small></kbd>表示循环变量，用<kbd><small><font color=#CC1E1E>T</font></small></kbd>表示模板参数等。常用的一些缩写可以参照如下对照表。
 
 | 全称  |  缩写 |
 | :----: | :----: |
@@ -142,27 +142,27 @@ int dstb;               // 连dustbin226自己的成员都不会懂的省略
 
 ### 1.2 文件命名
 
-文件名全部小写，单词之间使用下划线(<kbd>\_</kbd>)分割。Google规范中允许使用下划线(<kbd>\_</kbd>)和连字符(<kbd>\-</kbd>)两种分隔符，但是为了和STL等已有的库保持一致，我们选择下划线。
+文件名全部小写，单词之间使用下划线(<kbd><small><font color=#CC1E1E>\_</font></small></kbd>)分割。Google规范中允许使用下划线(<kbd><small><font color=#CC1E1E>\_</font></small></kbd>)和连字符(<kbd><small><font color=#CC1E1E>\-</font></small></kbd>)两种分隔符，但是为了和STL等已有的库保持一致，我们选择下划线。
 
 - 可接受的文件命名
-    - <kbd>my_kernel.cpp</kbd>
-    - <kbd>huqiang_simple_allocator.cpp</kbd>
-    - <kbd>a_very_very_very_long_but_useful_headfile.h</kbd>
+    - <kbd><small><font color=#CC1E1E>my_kernel.cpp</font></small></kbd>
+    - <kbd><small><font color=#CC1E1E>huqiang_simple_allocator.cpp</font></small></kbd>
+    - <kbd><small><font color=#CC1E1E>a_very_very_very_long_but_useful_headfile.h</font></small></kbd>
 
 - 不接受的文件命名
-    - <kbd>LiAsNH3Vector.cpp</kbd>
-    - <kbd>YujianLinStack.cpp</kbd>
-    - <kbd>connect-by-hyphen-is-also-rejected.h</kbd>
+    - <kbd><small><font color=#CC1E1E>LiAsNH3Vector.cpp</font></small></kbd>
+    - <kbd><small><font color=#CC1E1E>YujianLinStack.cpp</font></small></kbd>
+    - <kbd><small><font color=#CC1E1E>connect-by-hyphen-is-also-rejected.h</font></small></kbd>
 
-C++文件以<kbd>.cpp</kbd>结尾，头文件以<kbd>.h</kbd>结尾。**不要使用**在诸如<kbd>/usr/include</kbd>等文件夹下已经存在的文件名。
+C++文件以<kbd><small><font color=#CC1E1E>.cpp</font></small></kbd>结尾，头文件以<kbd><small><font color=#CC1E1E>.h</font></small></kbd>结尾。**不要使用**在诸如<kbd><small><font color=#CC1E1E>/usr/include</font></small></kbd>等文件夹下已经存在的文件名。
 
-应该尽量让文件名更加明确，比如<kbd>fem_poission_l2error.h</kbd>比<kbd>l2error.h</kbd>好得多 (当然<kbd>fem</kbd>这种其他人不一定理解的缩写应该尽量避免)。
+应该尽量让文件名更加明确，比如<kbd><small><font color=#CC1E1E>fem_poission_l2error.h</font></small></kbd>比<kbd><small><font color=#CC1E1E>l2error.h</font></small></kbd>好得多 (当然<kbd><small><font color=#CC1E1E>fem</font></small></kbd>这种其他人不一定理解的缩写应该尽量避免)。
 
-如果定义类，文件名**必须**成对出现。比如<kbd>poission_weakform.cpp</kbd>和<kbd>poission_weakform.h</kbd>对应于类<kbd>PoissionWeakform</kbd>。
+如果定义类，文件名**必须**成对出现。比如<kbd><small><font color=#CC1E1E>poission_weakform.cpp</font></small></kbd>和<kbd><small><font color=#CC1E1E>poission_weakform.h</font></small></kbd>对应于类<kbd><small><font color=#CC1E1E>PoissionWeakform</font></small></kbd>。
 
 ### 1.3 类型命名
 
-类名、结构体名、类型定义(<kbd>typedef</kbd>)、<kbd>using</kbd>别名、枚举和类型模板参数等均以大写字母开始，每个单词首字母均大写，不含下划线。例如：
+类名、结构体名、类型定义(<kbd><small><font color=#CC1E1E>typedef</font></small></kbd>)、<kbd><small><font color=#CC1E1E>using</font></small></kbd>别名、枚举和类型模板参数等均以大写字母开始，每个单词首字母均大写，不含下划线。例如：
 
 ```c++
 /* 类和结构体 */
@@ -198,17 +198,17 @@ double dNum;                    // 更不要用匈牙利命名法!
 
 #### 1.4.2 类数据成员
 
-<kbd><font color=#FF0000>TODO: 具体使用哪种待定</font></kbd>
-类的数据成员(成员变量)不管是静态还是非静态，都和普通变量一样命名，但是要<kbd><font color=#FF0000>TODO: 在其前面/在其后面</font></kbd>添加下划线。
+<kbd><small><font color=#CC1E1E>TODO: 具体使用哪种待定</font></small></kbd>
+类的数据成员(成员变量)不管是静态还是非静态，都和普通变量一样命名，但是要<kbd><small><font color=#CC1E1E>TODO: 在其前面/在其后面</font></small></kbd>添加下划线。
 
 #### 1.4.3 结构体数据成员
 
-结构体的数据成员不管是静态还是非静态，都和普通变量一样命名，**不需要**像类成员变量一样<kbd><font color=#FF0000>TODO: 在其前面/在其后面</font></kbd>添加下划线。
+结构体的数据成员不管是静态还是非静态，都和普通变量一样命名，**不需要**像类成员变量一样<kbd><small><font color=#CC1E1E>TODO: 在其前面/在其后面</font></small></kbd>添加下划线。
 
 ### 1.5 常量命名
 #### 1.5.1 声明为const的变量
 
-声明为<kbd>const</kbd>，或运行期间其值始终保持不变的变量命名时以字母<kbd>k</kbd>开头，并且大小写混合，不加下划线。例如：
+声明为<kbd><small><font color=#CC1E1E>const</font></small></kbd>，或运行期间其值始终保持不变的变量命名时以字母<kbd><small><font color=#CC1E1E>k</font></small></kbd>开头，并且大小写混合，不加下划线。例如：
 
 ```c++
 const int kDaysInAWeek = 7;
@@ -222,7 +222,7 @@ int MyFunction(const int days_in_a_week);
 
 #### 1.5.2 声明为constexpr的字面量
 
-声明为<kbd>constexpr</kbd>的字面量和宏使用方式相似，因此按照宏的方式命名，全大写并且加下划线。例如：
+声明为<kbd><small><font color=#CC1E1E>constexpr</font></small></kbd>的字面量和宏使用方式相似，因此按照宏的方式命名，全大写并且加下划线。例如：
 
 ```c++
 /* instead of '#define DAYS_IN_A_WEEK 7' */
@@ -260,9 +260,9 @@ void GenerateFemSpace(...);         // good
 void GenerateFEMSpace(...);         // bad
 ```
 
-函数的命名有一个特例：取值/设值函数(即<kbd>get/set</kbd>函数)的命名应该与变量一致。不过这不是强制要求，实际命名时怎么舒服怎么来。例如：
+函数的命名有一个特例：取值/设值函数(即<kbd><small><font color=#CC1E1E>get/set</font></small></kbd>函数)的命名应该与变量一致。不过这不是强制要求，实际命名时怎么舒服怎么来。例如：
 
-<kbd><font color=#FF0000>TODO：类成员变量的下划线尚未确定，以前置代替</font></kbd>
+<kbd><small><font color=#CC1E1E>TODO：类成员变量的下划线尚未确定，以前置代替</font></small></kbd>
 ```c++
 class MyClass
 {
@@ -282,7 +282,7 @@ private:
 
 **最高级的命名空间名字与项目名称要相同**。命名空间中的代码应当存放于和命名空间名字相匹配的文件夹或其子文件夹中。
 
-要避免嵌套的命名空间与常见的顶级命名空间发生冲突。尤其是**不要**创建嵌套的<kbd>std</kbd>命名空间。例如：
+要避免嵌套的命名空间与常见的顶级命名空间发生冲突。尤其是**不要**创建嵌套的<kbd><small><font color=#CC1E1E>std</font></small></kbd>命名空间。例如：
 
 ```c++
 namespace Dustbin226FirstProject {}
@@ -292,7 +292,22 @@ namespace InterpolationPolynomial
 }
 ```
 
-对<kbd>internal</kbd>命名空间，要当心加入到同一 <kbd>internal</kbd>命名空间的代码之间发生冲突 (由于内部维护人员通常来自同一团队, 因此常有可能导致冲突). 在这种情况下, 请使用文件名以使得内部名称独一无二 。
+对<kbd><small><font color=#CC1E1E>internal</font></small></kbd>命名空间，要当心加入到同一 <kbd><small><font color=#CC1E1E>internal</font></small></kbd>命名空间的代码之间发生冲突 (由于内部维护人员通常来自同一团队, 因此常有可能导致冲突). 在这种情况下, 请使用文件名以使得内部名称独一无二 。
 
 ### 1.9 枚举命名
 
+枚举名属于类型，因此采用大小写混合的方式。
+
+单独的枚举值应该优先采用常量的命名方式，即命名时以字母<kbd><small><font color=#CC1E1E>k</font></small></kbd>开头，并且大小写混合，不加下划线。考虑到使用习惯，枚举变量的命名也和枚举名命名方式一样。例如：
+
+```c++
+enum class ErrorType
+{
+    L2Error,
+    H1Error,
+    L2hError,
+    H1hError
+};
+```
+
+> 注意：另外一种惯例是将枚举值按照宏的方式命名，但是可能会导致编译期问题，因此**不允许**使用宏命名方式来命名枚举值。
