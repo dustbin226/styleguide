@@ -134,12 +134,26 @@ double dNum;                    // 更不要用匈牙利命名法!
 
 #### 1.4.2 类数据成员
 
-<kbd><small><font color=#CC1E1E>TODO: 具体使用哪种待定</font></small></kbd>
-类的数据成员(成员变量)不管是静态还是非静态，都和普通变量一样命名，但是要<kbd><small><font color=#CC1E1E>TODO: 在其前面/在其后面</font></small></kbd>添加下划线。
+类的数据成员(成员变量)不管是静态还是非静态，都和普通变量一样命名，但是要在其前面添加下划线。例如：
+
+```c++
+class MyClass
+{
+private:
+    int _my_member_variable;
+};
+```
 
 #### 1.4.3 结构体数据成员
 
-结构体的数据成员不管是静态还是非静态，都和普通变量一样命名，**不需要**像类成员变量一样<kbd><small><font color=#CC1E1E>TODO: 在其前面/在其后面</font></small></kbd>添加下划线。
+结构体的数据成员不管是静态还是非静态，都和普通变量一样命名，**不需要**像类成员变量一样在其前面添加下划线。
+
+```c++
+struct MyStruct
+{
+    int my_member_variable;
+}
+```
 
 ### 1.5 常量命名
 #### 1.5.1 声明为const的变量
@@ -198,7 +212,6 @@ void GenerateFEMSpace(...);         // bad
 
 函数的命名有一个特例：取值/设值函数(即<kbd><small><font color=#CC1E1E>get/set</font></small></kbd>函数)的命名应该与变量一致。不过这不是强制要求，实际命名时怎么舒服怎么来。例如：
 
-<kbd><small><font color=#CC1E1E>TODO：类成员变量的下划线尚未确定，以前置代替</font></small></kbd>
 ```c++
 class MyClass
 {
@@ -228,7 +241,7 @@ namespace InterpolationPolynomial
 }
 ```
 
-对<kbd><small><font color=#CC1E1E>internal</font></small></kbd>命名空间，要当心加入到同一 <kbd><small><font color=#CC1E1E>internal</font></small></kbd>命名空间的代码之间发生冲突 (由于内部维护人员通常来自同一团队, 因此常有可能导致冲突). 在这种情况下, 请使用文件名以使得内部名称独一无二 。
+对<kbd><small><font color=#CC1E1E>internal</font></small></kbd>命名空间，要当心加入到同一 <kbd><small><font color=#CC1E1E>internal</font></small></kbd>命名空间的代码之间发生冲突 (由于内部维护人员通常来自同一团队, 因此常有可能导致冲突)。在这种情况下, 请使用文件名以使得内部名称独一无二 。
 
 ### 1.9 枚举命名
 
