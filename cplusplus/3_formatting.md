@@ -151,7 +151,6 @@ if (x == kFoo) return new Foo();
 if (x == kBar) return new Bar();
 ```
 为了统一，除了上面例子中的单行<kbd><small><font color=#CC1E1E>if</font></small></kbd>可以不使用大括号外，其余的条件语句必须使用大括号。例如：
-但如果语句中某个 if-else 分支使用了大括号的话, 其它分支也必须使用：
 
 ```c++
 if(condition)
