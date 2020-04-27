@@ -298,10 +298,6 @@ return(result);                 // return 可不是函数！
 
 访问控制块的声明依次序是<kbd><small><font color=#CC1E1E>public:</font></small></kbd>，<kbd><small><font color=#CC1E1E>protected:</font></small></kbd>，<kbd><small><font color=#CC1E1E>private:</font></small></kbd>，不需要空格缩进。例如：
 
-说明
-
-类声明 (下面的代码中缺少注释, 参考 类注释) 的基本格式如下:
-
 ```c++
 class MyClass : public MyBaseClass {
 public:      
