@@ -18,13 +18,13 @@
 
 如果无法在不伤害易读性的条件下进行断行，那么可以超过80个字符，这样可以方便复制粘贴。例如带有命令示例或URL的行可以超过80个字符。
 
-包含长路径的<kbd>#include</kbd>语句可以超出80列，头文件保护可以无视该原则。
+包含长路径的<kbd><small><font color=#CC1E1E>#include</font></small></kbd>语句可以超出80列，头文件保护可以无视该原则。
 
 ### 3.2 非 ASCII 字符
 
 非ASCII字符统一使用**UTF-8**编码，因为UTF-8的兼容性较好。
 
-不要使用<kbd>char16_t</kbd>和<kbd>char32_t</kbd>。<kbd>wchar_t</kbd>同理, 除非你写的代码要调用Windows API。C++ 20标准以后，使用<kbd>char8_t</kbd>。
+不要使用<kbd><small><font color=#CC1E1E>char16_t</font></small></kbd>和<kbd><small><font color=#CC1E1E>char32_t</font></small></kbd>。<kbd><small><font color=#CC1E1E>wchar_t</font></small></kbd>同理, 除非你写的代码要调用Windows API。C++ 20标准以后，使用<kbd><small><font color=#CC1E1E>char8_t</font></small></kbd>。
 
 ### 3.3 代码缩进
 
@@ -73,7 +73,7 @@ MUST_USE_RESULT bool IsOK();
 
 Lambda表达式对形参和函数体的格式化和其他函数一致。捕获列表同理，表项用逗号隔开。
 
-若用引用捕获，在变量名和<kbd>&</kbd>之间不留空格。例如：
+若用引用捕获，在变量名和<kbd><small><font color=#CC1E1E>&</font></small></kbd>之间不留空格。例如：
 ```c++
 int x = 0;
 auto add_to_x = [&x](int n) { x += n; };
@@ -140,17 +140,17 @@ my_widget.Transform(x1, x2, x3,
 与函数调用保持一致即可。
 
 ### 3.8 条件语句
-关键字<kbd>if</kbd>和<kbd>else</kbd>另起一行。
+关键字<kbd><small><font color=#CC1E1E>if</font></small></kbd>和<kbd><small><font color=#CC1E1E>else</font></small></kbd>另起一行。
 
 对基本条件语句，不要在空格和条件中添加空格。
 
-如果能增强可读性，简短的条件语句允许写在同一行。只有当语句简单并且**没有使用**<kbd>else</kbd>子句时使用。例如：
+如果能增强可读性，简短的条件语句允许写在同一行。只有当语句简单并且**没有使用**<kbd><small><font color=#CC1E1E>else</font></small></kbd>子句时使用。例如：
 
 ```c++
 if (x == kFoo) return new Foo();
 if (x == kBar) return new Bar();
 ```
-为了统一，除了上面例子中的单行<kbd>if</kbd>可以不使用大括号外，其余的条件语句必须使用大括号。例如：
+为了统一，除了上面例子中的单行<kbd><small><font color=#CC1E1E>if</font></small></kbd>可以不使用大括号外，其余的条件语句必须使用大括号。例如：
 但如果语句中某个 if-else 分支使用了大括号的话, 其它分支也必须使用：
 
 ```c++
@@ -166,7 +166,7 @@ else
 
 ### 3.9 循环和选择语句
 
-<kbd>switch</kbd>语句使用大括号分段，以表明cases之间不是连在一起的。<kbd>switch</kbd>语句应该有<kbd>default</kbd>子句用于处理不满足条件的枚举值。如果<kbd>default</kbd>永远执行不到，添加一条<kbd>assert</kbd>。例如：
+<kbd><small><font color=#CC1E1E>switch</font></small></kbd>语句使用大括号分段，以表明cases之间不是连在一起的。<kbd><small><font color=#CC1E1E>switch</font></small></kbd>语句应该有<kbd><small><font color=#CC1E1E>default</font></small></kbd>子句用于处理不满足条件的枚举值。如果<kbd><small><font color=#CC1E1E>default</font></small></kbd>永远执行不到，添加一条<kbd><small><font color=#CC1E1E>assert</font></small></kbd>。例如：
 
 
 ```c++
@@ -189,7 +189,7 @@ switch(var)
 }
 ```
 
-单语句循环里，括号可用可不用。空循环体应使用<kbd>continue</kbd>表明而不是只用一个分号。例如：
+单语句循环里，括号可用可不用。空循环体应使用<kbd><small><font color=#CC1E1E>continue</font></small></kbd>表明而不是只用一个分号。例如：
 
 ```c++
 // 循环只有一条语句，大括号可以忽略不写
@@ -225,7 +225,7 @@ x = r. y;
 x = r ->y;
 ```
 
-在声明指针变量或引用时，<kbd>\*/&</kbd>与类型或变量名紧挨都可以。为了规范的统一，这里强行要求使用空格后置的规范，并且要求在多重声明中**不能**使用<kbd>\*/&</kbd>。例如：
+在声明指针变量或引用时，<kbd><small><font color=#CC1E1E>\*/&</font></small></kbd>与类型或变量名紧挨都可以。为了规范的统一，这里强行要求使用空格后置的规范，并且要求在多重声明中**不能**使用<kbd><small><font color=#CC1E1E>\*/&</font></small></kbd>。例如：
 
 ```c++
 // 符合规范的示例
@@ -240,7 +240,7 @@ int a, *b;        // 多重声明中不能有*/&
 
 ### 3.11 布尔表达式
 
-如果一个布尔表达式超过标准行宽，断行时将逻辑操作符<kbd>&&</kbd>或<kbd>||</kbd>放在行尾。可以额外插入圆括号增强可读性。例如：
+如果一个布尔表达式超过标准行宽，断行时将逻辑操作符<kbd><small><font color=#CC1E1E>&&</font></small></kbd>或<kbd><small><font color=#CC1E1E>||</font></small></kbd>放在行尾。可以额外插入圆括号增强可读性。例如：
 
 ```c++
 if(this_one_thing > this_other_thing &&
@@ -253,7 +253,7 @@ if(this_one_thing > this_other_thing &&
 
 ### 3.12 函数返回值
 
-不要在<kbd>return</kbd>表达式里加上非必须的圆括号，只有在写<kbd>x = expr</kbd>要加上括号的时候才使用括号。例如：
+不要在<kbd><small><font color=#CC1E1E>return</font></small></kbd>表达式里加上非必须的圆括号，只有在写<kbd><small><font color=#CC1E1E>x = expr</font></small></kbd>要加上括号的时候才使用括号。例如：
 
 ```c++
 return result;                  // 返回值很简单, 没有圆括号.
@@ -266,7 +266,7 @@ return(result);                 // return 可不是函数！
 
 ### 3.13 变量及数组初始化
 
-用<kbd>=</kbd>，<kbd>()</kbd>和<kbd>{}</kbd>均可，但是要注意列表初始化会涉及<kbd>std::initializer_list</kbd>构造函数的问题。
+用<kbd><small><font color=#CC1E1E>=</font></small></kbd>，<kbd><small><font color=#CC1E1E>()</font></small></kbd>和<kbd><small><font color=#CC1E1E>{}</font></small></kbd>均可，但是要注意列表初始化会涉及<kbd><small><font color=#CC1E1E>std::initializer_list</font></small></kbd>构造函数的问题。
 
 
 ### 3.14 预处理指令
@@ -297,7 +297,7 @@ return(result);                 // return 可不是函数！
 
 ### 3.15 类格式
 
-访问控制块的声明依次序是<kbd>public:</kbd>，<kbd>protected:</kbd>，<kbd>private:</kbd>，不需要空格缩进。例如：
+访问控制块的声明依次序是<kbd><small><font color=#CC1E1E>public:</font></small></kbd>，<kbd><small><font color=#CC1E1E>protected:</font></small></kbd>，<kbd><small><font color=#CC1E1E>private:</font></small></kbd>，不需要空格缩进。例如：
 
 说明
 
@@ -372,3 +372,7 @@ MyClass::MyClass(int var)
 添加冗余的留白会给其他人编辑时造成额外负担。因此，行尾不要留空格。如果确定一行代码已经修改完毕，将多余的空格去掉；或者在专门清理空格时去掉(尤其是在没有其他人在处理这件事的时候)。
 
 垂直留白越少越好。尤其是：两个函数定义之间的空行不要超过 2 行。函数体首尾不要留空行，函数体中也不要随意添加空行。除非添加的空行能显著提升程序的可读性，否则，**不要使用空行**。
+
+- [返回目录](./0_title.md)
+- [上一节: 注释](./2_comment.md)
+- [下一节: ...]()
